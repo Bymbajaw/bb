@@ -1,0 +1,127 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container{
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+header{
+  background-color: #FFC017;
+  border-bottom:1px solid black;
+}
+
+.head{
+  display: flex;
+  justify-content: space-between;
+  height: 76px;
+  line-height: 250%;
+  
+}
+
+.headLogo a{
+  font-size: 34px;
+  text-decoration: none;
+  line-height: 200%;
+}
+
+.headerList{
+  display: flex;
+  width: 500px;
+  justify-content: space-between
+}
+
+
+.headerList p{
+  cursor: pointer;
+}
+
+.getstarted{
+  background-color: black;
+  color: #FFC017;
+  border: solid 1px black;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 20px;
+  height: 38px;
+  width: 105px;
+  margin-top: 18px
+}
+
+.startreading{
+  background-color: #191919;
+  height: 42px;
+  width: 213px;
+  border-radius: 20px;
+  border: 1px solid black;
+  color: white;
+  font-size: 20px
+}
+
+main{
+  background-color: #FFC017;
+
+}
+
+.main{
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainstay{
+ text-align: start;
+ 
+}
+
+.mainstay h1{
+  font-size: 106px;
+}
+
+
+.mainstay p{
+  font-size: 24px;
+  width: 400px;
+  margin-top: -40px;
+  padding-bottom: 40px
+}
+
+.mainimg{
+ 
+}
+
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
