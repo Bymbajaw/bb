@@ -1,8 +1,13 @@
 
 import './App.css';
+import news from './data'
 import Header from './components/Header';
 import Main from './components/Main';
 import Mainitems from './components/Mainitems';
+import News from './components/News';
+
+
+
 function App() {
 
   const headList = [
@@ -11,7 +16,6 @@ function App() {
     {id: 3, title: "Write"},
     {id: 4, title: "Sign in"},
   ];
-
 
 
 
@@ -27,6 +31,12 @@ function App() {
           <Main  />
         </div>
         <Mainitems />
+        <div className='news'>
+          {news.map((obj)=> {
+            console.log(obj);
+            return <News {...obj} />
+          })}
+        </div>
       </main>
     </div>
   );

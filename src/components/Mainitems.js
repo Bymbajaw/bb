@@ -1,66 +1,28 @@
-const main1Items= [
-    {
-      id:"01",
-      img:require("./images/1.png"),
-      text1:"Barack Obama",
-      text2:"My 2022 End of Year Lists",
-      date: "Dec 23, 2022",
-      read:"3 min read"
-    },
-    {
-      id:"02",
-      img:require("./images/2.png"),
-      text1:"Natasha Selvaraj in Towards Data Science",
-      text2:"How to Make Money While Learning Data Science in 2023",
-      date: "Dec 28, 2022",
-      read:"7 min read",
-      icon:require("./images/star.png")
-    },
-    {
-      id:'03',
-      img:require("./images/3.png"),
-      text1:"Maria Milojkovic, MA in Lessons from History",
-      text2:"He Used AI to See Today's Looks of The Famous People From the Past",
-      date: "Dec 28, 2022",
-      read:"10 min read",
-      icon:require("./images/star.png")
-    },
-    {
-      id:'04',
-      img:require("./images/4.png"),
-      text1:"Yang Zhou in TechToFreedom",
-      text2:"9 Python Built-In Decorators That Optimize Your Code Significantly",
-      date: "Jan 1, 2022",
-      read:"7 min read",
-      con:require("./images/star.png")
-    },
-    {
-      id:'05',
-      img:require("./images/5.png"),
-      text1:"Hanif Abdurraqib",
-      text2:"100 Favorite Albums of 2022",
-      date: "Dec 30, 2022",
-      read:"9 min read"
-    },
-    {
-      id:'06',
-      img:require("./images/6.png"),
-      text1:"Christopher Clemmons in Level Up Coding",
-      text2:"Structure Your React Project Like a Senior Developer",
-      date: "Dec 31, 2022",
-      read:"3 min read"
-    },
-  ]
+
+import App from "../App";
 
 
 
 
-  export default function Mainitems({main1Items}) {
-    console.log(main1Items);
-     return (
-      <div>
-        {/* <img src={main1Items.img} */}
+
+export default function Mainitems({img}) {
+
+  console.log(img);
+return (
+      <div className="head">
+      <div className="headLogo">
+          <a href=""><img src="https://s3-alpha-sig.figma.com/img/a3db/731f/0b84f1d63879beb7ed83a2f240e82a0c?Expires=1673827200&Signature=TbOOk-XQIhN6n5~r00i5FfnwxmGDqdqJgZTTB0574w9FBvDK4TysmauOqZZ-BOVrkBlxRqH8IN-lm9Ou1XlyjRu8x0mir4wYtJdzlgUmO8Ixuu1m1~yjsG8knqJdLBkAw3B5cdW-LA8d8lcuB6fekL8Qtg8Q0c7smS3aByK7YZ4XVUvkOlLRfpJcWzLeJ8MMIQBrjuIJFM-ATH~cdGtmTGyTePI9jzHsiV8rR9w9sfjYULf0ichu3XGDxR1ZhLp5FssAATG3HlDH2goJGdbkUm53IoA1ZhSb8FgS10ywiH5xDLc13alx0gk11Gbn~rYXwkr5PGxTkK8ioTalcgH3Bw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" /></a>
       </div>
-    )
-  }
-  
+      <div className="headerList">
+          {img.map((obj) => {
+              return (
+                  <div key={obj.id}>
+                      <p> {obj.title} </p>
+                  </div>
+              )
+          })}
+          <button className="getstarted">Get started</button>
+      </div>
+      </div>
+)
+}
