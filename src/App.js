@@ -4,7 +4,7 @@ import news from './data'
 import Header from './components/Header';
 import Main from './components/Main';
 import Mainitems from './components/Mainitems';
-import News from './components/News';
+import NewsCard from './components/NewsCard';
 
 
 
@@ -34,7 +34,7 @@ function App() {
         <div className='news'>
           {news.map((obj)=> {
             console.log(obj);
-            return <News {...obj} />
+            return <NewsCard {...obj} />
           })}
         </div>
       </main>
