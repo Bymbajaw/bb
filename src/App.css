@@ -92,7 +92,7 @@ header{
   font-size: 20px
 }
 
-main{
+.section-1{
   background-color: #FFC017;
 
 }
@@ -121,6 +121,118 @@ main{
 
 .mainimg{
  
+}
+
+.trend img{
+  object-fit: cover;
+  
+}
+.trend p{
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+
+.trending-cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+
+
+.trend-card{
+  height: 77px;
+  width: 410px;
+  text-align: start;
+  
+}
+
+.trend-head{
+  display: flex;
+  
+  
+  
+}
+.trend-head img{
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+.trend-head h4{
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.trend-body{
+  font-size: 15px;
+  font-weight: bold;
+  flex-wrap: wrap;
+}
+.trend-footer{
+  color: #757575;
+  font-size: 12px;
+}
+
+
+.section-3{
+  padding-top: 100px;
+}
+
+.news-cards{
+  width: 100%;
+  height: 134px;
+  display: flex;
+  justify-content: space-between;
+  text-align: start;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  
+}
+
+.news-head{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.news-head img{
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+.news-cont{
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  
+  
+}
+
+.news-title{
+  flex-wrap: wrap;
+  width: 600px;
+
+}
+
+
+.news-body p{
+  color: #757575;  
+}
+
+
+.news-footer{
+  color: #757575;
+}
+
+.news-img img{
+  object-fit: cover;
+  height: 200px
+}
+
+.hr{
+  margin-top: 100px
 }
 
 

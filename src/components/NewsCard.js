@@ -1,24 +1,45 @@
 import React from "react";
-// import { data } from "../data";
 
-export default function NewsCard({ img, head, title, read, date }) {
-  console.log(img, head, title, read, date );
+
+
+
+
+
+
+export default function NewsCard( {news} ) {
+  console.log(news );
 
   return (
-    <div>
-        {/* {data.map((e) => (
-            <h2>{e.head}</h2>
-        ))}; */}
-
-      <img src={img} alt="news img" />
-      <h2>{head}</h2>
-      <span>{title}</span>
-      <span>{read}</span>
-      <span>{date}</span>
+    <div className="container">
+      {news.map((obj) => (
+        <div key={obj.id} className="news-cards">
+          <div className="news-cont ">
+            <div className="">
+              <div className="news-head">
+              <span key={obj.createdUser.userId}></span>
+                <img src={obj.createdUser.img} />
+                <p>{obj.createdUser.Name}</p>
+              </div>
+              <div className="news-title">
+                <h3>{obj.head}</h3>
+              </div>
+              <div className="news-body ">
+                <p>{obj.title}</p>
+                {/* <span>{obj.isTrending}</span> */}
+                {/* <span>{obj.category}</span> */}
+              </div>
+              <div className="news-footer ">
+                <span>{obj.date + " · "}</span>
+                <span>{obj.read + " · "}</span>
+                <span>{obj.key}</span>
+              </div>
+            </div>
+            <div className="news-img">
+              <img src={obj.img} />
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
-//     {news.map((obj)=> {
-//         console.log(obj);
-//         return <NewsCard {...obj} />
-//       })}
   );
 }
