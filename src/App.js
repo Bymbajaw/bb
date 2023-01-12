@@ -1,10 +1,12 @@
 
 import './App.css';
-import news from './data'
+import news from './data';
+import trendingItems from './trending';
 import Header from './components/Header';
 import Main from './components/Main';
 import Mainitems from './components/Mainitems';
 import NewsCard from './components/NewsCard';
+import TrendingCard from './components/TrendingCard';
 
 
 
@@ -31,15 +33,28 @@ function App() {
           <Main  />
         </div>
         <Mainitems />
-        <div className='news'>
-          {news.map((obj)=> {
-            console.log(obj);
-            return <NewsCard {...obj} />
-          })}
+        <div className='section1'>
+          <div className='trendingItems'>
+            {trendingItems.map((obj)=> {
+              console.log(obj);
+              return <TrendingCard {...obj} />
+            })}
+          </div>
+        </div>
+        <div className='section2'>
+          <div className='news'>
+            {news.map((obj)=> {
+              console.log(obj);
+              return <NewsCard {...obj} />
+            })}
+          </div>
+          <div>
+
+          </div>
         </div>
       </main>
     </div>
   );
-}
+};
 
 export default App;
