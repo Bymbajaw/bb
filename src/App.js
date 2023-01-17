@@ -6,6 +6,8 @@ import Main from "./components/Main";
 import NewsCard from "./components/NewsCard";
 import TrendingCard from "./components/TrendingCard";
 import news from "./components/data";
+import LoginModal from "./components/LoginModal";
+// import Modal from "./components/modal";
 
 function App() {
   const trendingItems = [
@@ -64,6 +66,10 @@ function App() {
     },
   ];
 
+  // const handleModal = () => {
+  //   setModal(!modal);
+  // }
+
   return (
     <div className="App">
       <header>
@@ -92,7 +98,11 @@ function App() {
           <div className="news">
             <NewsCard news={news} />
           </div>
-          <div></div>
+          <div>
+            {/* {modal && ( */}
+            {/* <Modal /> */}
+            {/* )} */}
+          </div>
         </div>
       </main>
     </div>

@@ -6,7 +6,7 @@ const news = [
     title: "We know more now than before, and it's still alarming",
     isTrending: true,
     category: "Mental Health",
-    key: "Long Covid",
+    key: "Mental Health",
     read: "9 min read",
     createdUser: {
       Name: "Dr. Tom Frieden",
@@ -22,7 +22,7 @@ const news = [
     date: "Nov 25, 2022",
     isTrending: true,
     category: "Data Science",
-    key: "Futurism",
+    key: "Data Science",
     read: "11 min read",
     createdUser: {
       Name: "David Bowles",
@@ -39,7 +39,7 @@ const news = [
     date: "Aug 21, 2022",
     isTrending: true,
     category: "Productivity",
-    key: "Parental Alienation",
+    key: "Productivity",
     read: "6 min read",
     createdUser: {
       Name: "Ed Erginziger",
@@ -55,7 +55,7 @@ const news = [
     date: "Dec  8, 2022",
     isTrending: false,
     category: "Politics",
-    key: "Gpt 3",
+    key: "Politics",
     read: "4 min read",
     createdUser: {
       Name: "Thomas Smith",
@@ -72,7 +72,7 @@ const news = [
     date: "Dec 6, 2022",
     isTrending: false,
     category: "Long Covid",
-    key: "Music",
+    key: "Long Covid",
     read: "3 min read",
     createdUser: {
       Name: "Allegra Hobbs",
