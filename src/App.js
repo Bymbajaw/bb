@@ -6,7 +6,10 @@ import Main from "./components/Main";
 import NewsCard from "./components/NewsCard";
 import TrendingCard from "./components/TrendingCard";
 import news from "./components/data";
+import { Routes, Route } from "react-router-dom";
 import LoginModal from "./components/LoginModal";
+import GoogleLogin from "./components/GoogleLogin";
+import NewsDetail from "./components/NewsDetail";
 // import Modal from "./components/modal";
 
 function App() {
@@ -66,10 +69,6 @@ function App() {
     },
   ];
 
-  // const handleModal = () => {
-  //   setModal(!modal);
-  // }
-
   return (
     <div className="App">
       <header>
@@ -84,6 +83,13 @@ function App() {
           />
         </div>
       </header>
+      <div className="container">
+        <Routes>
+          {/* <Routes path="/" element={<Main />} /> */}
+          <Route path="/about" element={<About />} />
+          <Route path="/newsdetails/:id" element={<NewsDetail />} />
+        </Routes>
+      </div>
       <main>
         <div className="section-1">
           <div className="container">
@@ -98,13 +104,16 @@ function App() {
           <div className="news">
             <NewsCard news={news} />
           </div>
-          <div>
-            {/* {modal && ( */}
-            {/* <Modal /> */}
-            {/* )} */}
-          </div>
         </div>
       </main>
+    </div>
+  );
+}
+
+function About() {
+  return (
+    <div className="container" style={{ marginTop: "5rem" }}>
+      About
     </div>
   );
 }

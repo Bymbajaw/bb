@@ -65,7 +65,9 @@ a {
 header{
   background-color: #FFC017;
   border-bottom:1px solid black;
-  
+  position: fixed;
+  z-index: 1;
+  width: 100%;
 }
 
 .head{
@@ -117,7 +119,9 @@ header{
 
 .section-1{
   background-color: #FFC017;
-
+  top:70px;
+  
+  position: relative;
 }
 
 
@@ -326,6 +330,10 @@ body.active-modal{
   border-radius: 20px;
   margin-top: 10px;
   width: 250px;
+}
+
+.sign{
+  text-align: start;
 }
 
 .btn:hover{
