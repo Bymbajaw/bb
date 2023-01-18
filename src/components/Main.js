@@ -5,15 +5,21 @@ import Trending from "./TrendingCard";
 
 export default function Main() {
   return (
-    <div className="main">
-      <div className="mainstay">
-        <h1>Stay curious.</h1>
-        <p>
-          Discover stories, thinking, and expertise from writers on any topic.
-        </p>
-        <button className="startreading">Start reading</button>
+    <div className="main row d-flex">
+      <div className="mainstay col-6 row">
+        <div className="col-md-12">
+          <h1>Stay curious.</h1>
+        </div>
+        <div className="col-md-12">
+          <p>
+            Discover stories, thinking, and expertise from writers on any topic.
+          </p>
+        </div>
+        <div className="col-12">
+          <button className="startreading ">Start reading</button>
+        </div>
       </div>
-      <div className="mainimg">
+      <div className="mainimg col-6">
         <img src={require("../image/svg.png")} alt="" />
       </div>
     </div>

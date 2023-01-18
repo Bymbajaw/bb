@@ -1,16 +1,13 @@
 import LoginModal from "./LoginModal";
 
-
-export default function Header(
-  {
+export default function Header({
   style,
   onLogin,
   user,
   setUser,
   showModal,
   openModal,
-}
-) {
+}) {
   const cates = [
     { id: 1, title: "Our story", link: "about" },
     { id: 2, title: "Membership", link: "membership" },
@@ -20,9 +17,8 @@ export default function Header(
   ];
 
   return (
-    <div 
-    style={style} className=" header">
-      <div className="container d-flex justify-content-between align-items-center">
+    <div style={style} className=" header">
+      <div className="d-flex justify-content-between align-items-center">
         <img
           width={150}
           height={30}
@@ -38,20 +34,25 @@ export default function Header(
                   {a.id == 4 ? (
                     user ? (
                       user
-                      ) : (
-                        <span className="btn btn-primary" onClick={openModal}>
+                    ) : (
+                      <span
+                        className="btn btn-danger sign-in"
+                        onClick={openModal}
+                      >
                         {a.title}
                       </span>
                     )
-                    ) : (
-                      <a className="title" href={a.link}>
+                  ) : (
+                    <a className="title" href={a.link}>
                       {a.title}
                     </a>
                   )}
                 </li>
               </>
             ))}
-            <LoginModal />
+            <li className="list-item login">
+              <LoginModal />
+            </li>
 
             {user && (
               <button className="btn btn-warning" onClick={() => setUser("")}>
@@ -61,7 +62,6 @@ export default function Header(
           </ul>
         </nav>
       </div>
-      
     </div>
   );
 }

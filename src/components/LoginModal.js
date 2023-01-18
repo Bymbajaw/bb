@@ -10,8 +10,8 @@ export default function LoginModal() {
 
   return (
     <>
-      <button onClick={toggleModal} className="btn-modal">
-        login
+      <button onClick={toggleModal} className="btn-modal btn btn-primary login">
+        <p>login</p>
       </button>
 
       {modal && (
@@ -23,7 +23,7 @@ export default function LoginModal() {
           <div className="overlay" onClick={(e) => e.stopPropagation()}>
             <div className="modal-box">
               <div className="modal-content">
-                <div className="close-icon" onClick={toggleModal}> 
+                <div className="close-icon" onClick={toggleModal}>
                   <i class="bi bi-x-lg"></i>
                 </div>
                 <h2>Welcome back</h2>

@@ -77,8 +77,10 @@ export default function NewsCard({ news }) {
                   <span>{obj.date + " · "}</span>
                   <span>{obj.read + " · "}</span>
                   <span>{obj.key}</span>
+                  <a href="">
+                    <i class="bi bi-bookmark"></i>
+                  </a>
                 </div>
-                <a href=""><i class="bi bi-bookmark"></i></a>
               </div>
               <div className="news-img col-lg-4 col-sm-4 col-md-4">
                 <img src={obj.img} />

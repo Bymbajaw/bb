@@ -38,6 +38,7 @@
 .container{
   max-width: 80%;
   margin: 0 auto;
+  
 }
 
 
@@ -49,6 +50,11 @@ li {
 }
 .list-item {
   padding: 15px;
+  text-decoration: none;
+}
+
+.list-item a{
+  text-decoration: none;
 }
 
 a {
@@ -59,6 +65,7 @@ a {
 header{
   background-color: #FFC017;
   border-bottom:1px solid black;
+  
 }
 
 .head{
@@ -66,7 +73,7 @@ header{
   justify-content: space-between;
   height: 76px;
   line-height: 250%;
-  
+
 }
 
 .headLogo a{
@@ -113,10 +120,7 @@ header{
 
 }
 
-.main{
-  display: flex;
-  justify-content: space-between;
-}
+
 
 .mainstay{
  text-align: start;
@@ -125,6 +129,7 @@ header{
 
 .mainstay h1{
   font-size: 106px;
+  
 }
 
 
@@ -139,56 +144,51 @@ header{
  
 }
 
-.trend img{
-  object-fit: cover;
-  
-}
-.trend p{
-  font-weight: bold;
-  margin-left: 10px;
-}
 
-
-.trending-cards{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  
-}
-
-
-.trend-card{
-  height: 77px;
-  width: 410px;
+.trend{
   text-align: start;
-  
 }
 
-.trend-head{
-  display: flex;
-  
-  
-  
-}
-.trend-head img{
-  width: 20px;
-  height: 20px;
-  object-fit: cover;
-}
+ .trend-card{
+  text-align: start;
+ }
 
-.trend-head h4{
-  font-size: 16px;
-  margin-left: 5px;
-}
+ .trending-cards{
+  justify-content: space-between
+ }
 
-.trend-body{
+
+ .trend-card h4{
   font-size: 15px;
+  
+ }
+
+ .trend-body{
   font-weight: bold;
-  flex-wrap: wrap;
+ }
+
+ .trend-footer{
+  color: rgba(117, 117, 117, 1);
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: -20px;
 }
-.trend-footer{
-  color: #757575;
-  font-size: 12px;
+.trend-footer p{
+  
+}
+
+.aaa{
+  display: flex;
+}
+
+.aa{
+  display: flex;
+}
+
+.trend-body h2{
+  font-size: 16px;
+  margin-top: -10px;
+  font-weight: bold;
 }
 
 
@@ -262,35 +262,8 @@ header{
   text-align: center;
 }
 
-.boom{
-
-}
 
 
-/* 
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  display: none;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(221 221 221 / 90%);
-}
-
-.modal-body {
-  padding: 20px;
-  width: 450px;
-  background-color: white;
-  margin-top: 150px;
-  margin-right: auto;
-  margin-left: auto;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
 
 body.active-modal{
   overflow-y: hidden;
@@ -309,7 +282,7 @@ body.active-modal{
   left: 0;
   right: 0;
   bottom: 0;
-  
+  position: fixed;
 }
 
 .modal{
@@ -328,7 +301,7 @@ body.active-modal{
  
 .modal-box{
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 695px;
@@ -417,5 +390,18 @@ margin-right: 10px;
 
 .privacy a{
   color: rgba(117, 117, 117, 1);
+}
+
+.login{
+  width: 100px;
+  margin-top: 0px;
+}
+.login p{
+  margin-top: -5px;
+  
+}
+.sign-in{
+  width: 100px;
+  margin-top: 0px
 }
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
