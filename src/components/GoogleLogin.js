@@ -1,13 +1,18 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function GoogleLogin({ setUser, user, onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  //   const navigate = useNavigate();
+  const [admin, setAdmin] = useState(false)
+  
+  // const navigate = useNavigate
+    const navigate = useNavigate();
 
   const [modal, setModal] = useState(false);
+  //clickeddd
   const toggleModal = () => {
-    console.log("clicked");
+
     setModal(!modal);
   };
   return (
@@ -66,6 +71,10 @@ export default function GoogleLogin({ setUser, user, onLogin }) {
                   >
                     Close
                   </button>
+                  <span onClick={() => {
+                    setAdmin(true);
+                    navigate("/login")
+                  }}>Go to admin login</span>
                 </div>
               </div>
             </div>

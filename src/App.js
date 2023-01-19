@@ -10,6 +10,10 @@ import { Routes, Route } from "react-router-dom";
 import LoginModal from "./components/LoginModal";
 import GoogleLogin from "./components/GoogleLogin";
 import NewsDetail from "./components/NewsDetail";
+import Login from "./components/admin/Login";
+import Admin from "./components/admin/Admin";
+import { useState } from "react";
+import BarChart from "./components/admin/BarChart";
 // import Modal from "./components/modal";
 
 function App() {
@@ -69,6 +73,7 @@ function App() {
     },
   ];
 
+
   return (
     <div className="App">
       <header>
@@ -88,6 +93,13 @@ function App() {
           {/* <Routes path="/" element={<Main />} /> */}
           <Route path="/about" element={<About />} />
           <Route path="/newsdetails/:id" element={<NewsDetail />} />
+        </Routes>
+      </div>
+      <div>
+        <Routes>
+          <Route exact path=  "/login" element={<Login />}/>
+          <Route path="/admin" element={<Admin />}/>
+          <Route path="/barchat" element={<BarChart />}/>
         </Routes>
       </div>
       <main>
