@@ -1,37 +1,56 @@
-import React from "react";
+import React from 'react';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import { Bar } from 'react-chartjs-2';
+import {faker} from '@faker-js/faker';
 
-export default function BarChart() {
-  return (
-    <div className="bg-dark">
-      <div className="container">
-        <div className="navbar bg-dark flex-nowrap">
-          <a href="#" className="col-md-3 navbar-brand text-light">
-            Company Name
-          </a>
-          <input type="text" className="w-100 form-control bg-dark border-0" />
-          <div className="nav text-nowrap">
-            <a href="/">
-              <span className="text-light"> Log Out </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <main>
-        {/* <div className="section-1">
-          <div className="container">
-            <Main />
-          </div>
-        </div>
-        <div className="section-2">
-          <TrendingCard trendingItems={trendingItems} />
-        </div>
-        <hr className="hr" />
-        <div className="section-3">
-          <div className="news">
-            <NewsCard news={news} />
-          </div>
-        </div> */}
-      </main>
-    </div>
-  );
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+export const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: 'top',
+    },
+    title: {
+      display: true,
+      text: 'Chart.js Bar Chart',
+    },
+  },
+};
+
+const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+
+export const data = {
+  labels,
+  datasets: [
+    {
+      label: 'Dataset 1',
+      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+    },
+    {
+      label: 'Dataset 2',
+      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+      backgroundColor: 'rgba(53, 162, 235, 0.5)',
+    },
+  ],
+};
+
+export function BarChart() {
+  return <Bar options={options} data={data} />;
 }
