@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import LoginModal from "./LoginModal";
 
 export default function Header({
@@ -9,23 +10,27 @@ export default function Header({
   openModal,
 }) {
   const cates = [
-    { id: 1, title: "Our story", link: "about" },
+    { id: 1, title: "Our story", link: "ourstory" },
     { id: 2, title: "Membership", link: "membership" },
     { id: 3, title: "Write", link: "write" },
     { id: 5, title: "Get started", link: "#" },
-    { id: 4, title: "Sign In", link: "#" },
+    // { id: 4, title: "Sign In", link: "#" },
   ];
 
   return (
     <div style={style} className=" header">
       <div className="d-flex justify-content-between align-items-center">
-        <img
-          width={150}
-          height={30}
-          className="img"
-          src={"https://miro.medium.com/max/8978/1*s986xIGqhfsN8U--09_AdA.png"}
-          alt="logo"
-        />
+        <Link to="/">
+          <img
+            width={150}
+            height={30}
+            className="img"
+            src={
+              "https://miro.medium.com/max/8978/1*s986xIGqhfsN8U--09_AdA.png"
+            }
+            alt="logo"
+          />
+        </Link>
         <nav>
           <ul className="d-flex align-items-center">
             {cates.map((a, index) => (
