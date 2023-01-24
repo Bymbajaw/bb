@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
-import Dashboard from "./Dashboard";
+import { Navigate, Outlet, useNavigate } from "react-router-dom";
 
 export default function Admin() {
   const [news, setNews] = useState([]);
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-
-
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -32,9 +29,9 @@ export default function Admin() {
   return (
     <>
       <div className="bg-dark">
-        <div className="container">
+        <div className="container-fluid">
           <div className="navbar bg-dark flex-nowrap">
-            <a href="/admin" className="col-md-3 navbar-brand text-light">
+            <a href="/admin" className=" navbar-brand text-light">
               Company Name
             </a>
             <input
@@ -42,9 +39,16 @@ export default function Admin() {
               className="w-100 form-control bg-dark border-0"
             />
             <div className="nav text-nowrap">
-              <a href="/">
-                <span className="text-light"> Log Out </span>
-              </a>
+              <span className="text-light">{localStorage.getItem("name")}</span>
+              <span
+                className="text-light"
+                onClick={() => {
+                  localStorage.clear();
+                  navigate("/login");
+                }}
+              >
+                Log Out
+              </span>
             </div>
           </div>
         </div>
@@ -54,17 +58,17 @@ export default function Admin() {
           <div className="col-md-2">
             <div className="list-group">
               <div className="list-group-item">
-                <a href="/admin/dashboard">Dashboard</a>
+                <a href="/admin">Dashboard</a>
               </div>
               <div className="list-group-item">
-                <a href="news">News</a>
+                <a href="/admin/news">News</a>
               </div>
               <div className="list-group-item">
                 <a href="/admin/user">User</a>
               </div>
             </div>
           </div>
-          <div className="col-md-9">
+          <div className="col-md-10">
             <Outlet />
           </div>
         </div>

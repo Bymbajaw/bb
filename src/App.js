@@ -10,6 +10,7 @@ import Admin from "./components/admin/Admin";
 import Dashboard from "./components/admin/Dashboard";
 import News from "./components/admin/News";
 import User from "./components/admin/User";
+import AddUser from "./components/admin/AddUser";
 
 function App() {
   return (
@@ -23,9 +24,10 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<Admin />}>
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="news" element={<News />} />
-          <Route path="user" element={<User />} />
+          <Route path="/admin" element={<Dashboard />} />
+          <Route path="/admin/news" element={<News />} />
+          <Route path="/admin/user" element={<User />} />
+          <Route path="/admin/adduser" element={<AddUser />} />
         </Route>
         <Route path="/piechart" element={<PieChart />} />
       </Routes>

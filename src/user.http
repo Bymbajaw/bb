@@ -1,0 +1,23 @@
+###
+get https://medium-api-psi.vercel.app/api/users
+
+
+###
+get http://localhost:3000/api/users?id=63cde513f76277111603ecad
+
+
+
+###
+post https://medium-api-psi.vercel.app/api/users
+content-type: application/json
+
+{
+  "username":"Bebe",
+  "password":"0512",
+  "userType":"admin",
+  "firstName": "Byambajaw",
+  "lastName": "Bebe",
+  "userId": "1",
+  "userImg":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxy6RxLojUCau-I0PFwlyXWnb4zY2yq-dQyA&usqp=CAU",
+  "organization": "Covid"
+}

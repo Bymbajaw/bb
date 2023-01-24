@@ -1,7 +1,4 @@
-import { Title } from 'chart.js';
-import React, { useEffect, useState } from 'react'
-
-
+import React, { useEffect, useState } from "react";
 
 export default function Dashboard() {
   const [news, setNews] = useState([]);
