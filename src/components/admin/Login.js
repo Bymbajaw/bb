@@ -4,6 +4,12 @@ import { useNavigate } from "react-router-dom";
 export default function Login() {
   const navigate = useNavigate();
 
+
+
+  // const  = () = {
+
+  // }
+
   return (
     <div className="modal" style={{ display: "block" }}>
       <div className="modal-body">
@@ -23,7 +29,7 @@ export default function Login() {
               </div>
               <div className="mb3">
                 <button
-                  onClick={() => navigate("/barchart")}
+                  onClick={() => navigate("/admin")}
                   className="btn btn-primary"
                 >
                   Login
