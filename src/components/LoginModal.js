@@ -1,4 +1,4 @@
-import React, { useState, useSyncExternalStore } from "react";
+import React, { useState } from "react";
 import GoogleLogin from "./GoogleLogin";
 
 export default function LoginModal() {

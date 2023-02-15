@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Navigate, Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 export default function Admin() {
   const [news, setNews] = useState([]);
