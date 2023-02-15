@@ -13,7 +13,7 @@ export default function Header({
     { id: 1, title: "Our story", link: "ourstory" },
     { id: 2, title: "Membership", link: "membership" },
     { id: 3, title: "Write", link: "write" },
-    { id: 5, title: "Get started", link: "#" },
+    { id: 4, title: "Get started", link: "#" },
     // { id: 4, title: "Sign In", link: "#" },
   ];
 
